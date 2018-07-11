@@ -1,0 +1,99 @@
+﻿@model IEnumerable<AmarIshkul.Entity.SubjectChapterQuestionDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubjectChapterQuestionSetup.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAnswerName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerName2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAnswerName2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerName3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAnswerName3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerName4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAnswerName4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubjectChapterQuestionSetup.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerName1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsAnswerName1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerName2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsAnswerName2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerName3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsAnswerName3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerName4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsAnswerName4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

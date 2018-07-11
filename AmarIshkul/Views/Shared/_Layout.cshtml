@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="~/Content/logo/logo.png">
+    <title>আমার ইশকুল</title>
+
+    @* Popup Message Save Successfully Show *@
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/fileinput")
+    @Styles.Render("~/bundles/fileinputcss")
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link href="~/Content/Template/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+   
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link href="~/Content/Template/font-awesome.css" rel="stylesheet"/>
+    <link href="~/Content/Template/ionicons.css" rel="stylesheet" />
+
+    <!-- Theme style -->
+    <link href="~/Content/Template/dist/css/skins/skin-black.min.css" rel="stylesheet" />
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+  
+    @*<link href="~/Content/Template/dist/css/skins/_all-skins.min.css" rel="stylesheet" />*@
+    
+
+    <script src="~/Content/Template/bootstrap/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Content/Template/dist/js/app.js"></script>
+
+
+    @* Popup Message Save Successfully Show *@
+    <script src="~/Content/PopUpMessage/dist/sweetalert.min.js"></script>
+    <link href="~/Content/PopUpMessage/dist/sweetalert.css" rel="stylesheet" />
+
+
+    @*DateTime Picker *@
+    <script src="~/Content/DateTimePicker/bootstrap-datetimepicker.min.js"></script>
+    <link href="~/Content/DateTimePicker/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+    <link href="~/Content/Template/dist/css/AdminLTE.min.css" rel="stylesheet" /> 
+
+</head>
+
+<body class="hold-transition skin-black sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>AI</b></span>
+                <!-- logo for regular state and mobile devices -->
+                @*<span class="logo-lg"><b>Admin</b>LTE</span>*@
+                <span class="logo-lg">
+                    <b>আমার ইশকুল</b>
+                @*   <img class="img-responsive" style="height:60px;width:30px;" src="~/Content/logo/logo.png" /> *@
+                    
+                </span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                       
+
+                        <li class="dropdown user user-menu">
+                            <a href="">
+                                @*<img src="~/Content/Images/mracademy.png" class="user-image" alt="User Image">*@
+                                <span class="hidden-xs">Hellow @Session["LoginUserName"] !</span>
+                            </a>
+                        </li>
+
+
+
+
+                        <li class="dropdown user user-menu">
+                            <a href="~/Account/LogOff">
+                                @*<img src="~/Content/Images/mracademy.png" class="user-image" alt="User Image">*@
+                                <span class="hidden-xs">Sign out</span>
+                            </a>
+
+                        </li>
+
+                        <!-- Control Sidebar Toggle Button -->
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                @*This content found _Menu*@
+                @Html.Partial("_Menu")
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper" style="background-color:#fff;">
+            <!-- Main content -->
+            <section class="content" style="font-size:18px;">
+                @RenderBody()
+            </section>
+
+        </div>
+
+        <footer class="main-footer hidden-print">
+            &copy;@DateTime.Now.Year - <strong> <a href=""></a>আমার ইশকুল</strong> all rights reserved.
+        </footer>
+    </div>
+</body>
+
+</html>
+
+@*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
+
+@RenderSection("scripts", required: false)
+
+@*<script type="text/javascript">
+            $(document).ready(function () {
+                $(".dropdown-toggle").dropdown();
+            });
+
+    </script>*@

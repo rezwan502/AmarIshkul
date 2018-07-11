@@ -1,0 +1,58 @@
+﻿@model AmarIshkul.Entity.SubjectChapterQuestionSetup
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SubjectChapterQuestionSetup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectChapterWiseDetails.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectChapterWiseDetails.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerQuestionMark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerQuestionMark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalMarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HighestMarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HighestMarks)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

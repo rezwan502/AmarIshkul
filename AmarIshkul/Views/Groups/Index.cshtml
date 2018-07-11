@@ -1,0 +1,50 @@
+﻿@model IEnumerable<AmarIshkul.Entity.Group>
+
+@{
+    ViewBag.Title = "Group List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center;color:black">Group List</h2>
+<p>
+    @Html.ActionLink("Create New Group", "Create", null, new { @Class = "btn btn-info btn-md" })
+</p>
+<br />
+&nbsp;
+<table class="table table-striped table-condensed" style="width:100%">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td style="text-align:center">
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @Class = "btn btn-warning btn-sm" })
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#@item.Id" data-whatever="">Delete</button>
+                <div class="modal fade" id="@item.Id" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-12" style="color:red">Are you sure you want to delete?</div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">No</button>
+                                @Html.ActionLink("Yes", "Delete", new { id = item.Id }, new { @Class = "btn btn-danger btn-sm" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

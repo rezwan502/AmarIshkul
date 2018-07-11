@@ -1,0 +1,114 @@
+﻿@model AmarIshkul.Entity.SubjectChapterQuestionDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SubjectChapterQuestionDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectChapterQuestionSetup.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubjectChapterQuestionSetup.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuestionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuestionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAnswerName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAnswerName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAnswerName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAnswerName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerName3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerName3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAnswerName3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAnswerName3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnswerName4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnswerName4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAnswerName4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAnswerName4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Answer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Answer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
